@@ -1,0 +1,56 @@
+<slideml version="DRAFT">
+  <layout aspectratio="16x9">
+    <master id="title" name="Title and Subtitle" slidenumber="no">
+      <h1><placeholder type="text" id="title">Title</placeholder><h1>
+      <h2><placeholder type="text" id="subtitle">Author</placeholder></h2>
+    </master>
+
+    <master id="list" name="General List Slide">
+      <h1><placeholder type="text" id="title">List Title</placeholder></h1>
+      <ul>
+        <placeholder id="list" type="iterator" wrapper="li">
+          <li>Item #1</li>
+          <li>Item #2</li>
+          <li>Item #3</li>
+        </placeholder>
+      </ul>
+    </master>
+
+  </layout>
+
+  <theme>
+    $brand-color: #ffff00;
+
+    master {
+      background-color: #fff;
+    }
+    master#title {
+      background-color: #ffff00;
+    }
+  </theme>
+
+  <slides>
+
+    <slide master="title">
+      <fill placeholder="title">An introduction to SlideML</fill>
+      <fill placeholder="subtitle">by Michael Chen, 2017</fill>
+    </slide>
+
+    <slide master="list">
+      <fill placeholder="title">Overview</fill>
+      <fill placeholder="list">
+        The problem of slides
+        Why SlideML
+        How to start
+        An example
+      </fill>
+    </slide>
+
+    <slide master="intro">
+      <fill placeholder="title">The problem of slides</fill>
+    </slide>
+
+
+  </slides>
+
+</slideml>
